@@ -1,19 +1,24 @@
-/*program to sum first n numbers in O(n) then O(1) */
+/*program to find the largest number in a array*/
 
 #include<stdio.h>
+//function to check the largest number 
+int maxnum(int ar[],int n)
+{
+  int max=0;
+  for(int check=0;check<n;check++)
+  {
+    if(ar[check]>max)
+    {
+    max=ar[check];
+    }
+  }
+  return max;
+}
 
 int main()
 {
-  int num,sum=0;
-  
-  printf("Enter the last natural nuumber:");
-  scanf("%d",&num);
- //sum= 1+2+3+.............n
- for(int i=1;i<=num;i++)
- {
-   sum= (num*num+num)/2;//time complexity O(1)
-  
- }
-  printf("The sum of %d natural number:%d\n",num,sum);  
+  int arr[]={1,2,3,45,564,3446,797};
+  int max = maxnum(arr,7);//calling the function here
+  printf("The max number in the array is %d",max); 
   return 0;
 }
