@@ -1,24 +1,25 @@
-/*program to find the largest number in a array*/
+/*program to convert decimal to binary number*/
 
 #include<stdio.h>
-//function to check the largest number 
-int maxnum(int ar[],int n)
-{
-  int max=0;
-  for(int check=0;check<n;check++)
-  {
-    if(ar[check]>max)
-    {
-    max=ar[check];
-    }
-  }
-  return max;
-}
+
 
 int main()
 {
-  int arr[]={1,2,3,45,564,3446,797};
-  int max = maxnum(arr,7);//calling the function here
-  printf("The max number in the array is %d",max); 
+  int n,rem,a[10],i=0;
+  scanf("%d",&n);
+  while(n)
+  {
+    rem=n%2;
+    n=n/2;
+    a[i]=rem;
+    i++;
+  }
+
+  for(int j= i-1;j>=0;j--)
+  {
+    printf("%d",a[j]);
+  }
+
+
   return 0;
 }
