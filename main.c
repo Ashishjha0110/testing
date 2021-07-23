@@ -1,26 +1,20 @@
 /*program to print *
-                  ***
-                 ***** */
+                   **
+                   *** */
 
 #include<stdio.h>
 
 int main()
 {
    int i, j,rows;
-   rows=5;
-   for(i=0;i<rows;i++)
+   scanf("%d",&rows);
+   for(i=1;i<=rows;i++)
    {
-     for(j=0;j<2*rows;j++)
-     {
-     if(j<rows-i-1 && j>rows-i+1)
+     for(j=1;j<=i;j++)
      {
        printf("*");
      }
-     else 
-     {
-       printf(" ");
-     }
-     }
      printf("\n");
    }
+   
 }
