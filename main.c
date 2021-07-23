@@ -1,6 +1,6 @@
-/*program to print *
-                   **
-                   *** */
+/*program to print 1
+                   12
+                   123 */
 
 #include<stdio.h>
 
@@ -12,7 +12,7 @@ int main()
    {
      for(j=1;j<=i;j++)
      {
-       printf("*");
+       printf("%d",j);
      }
      printf("\n");
    }
