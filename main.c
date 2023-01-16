@@ -1,17 +1,22 @@
 #include <stdio.h>
 int main()
 {
-  int i,j,k;
-  for(i=1;i<=5;i++) // Number of rows 
+  int i,rows,j,k;
+  printf("Enter the number of rows:\n");
+  scanf("%d",&rows);
+
+  for(i=1;i<=rows;i++)
     {
-      for(j=i;j<5;j++) // numbers of required spaces 
+      for(j=1;j<=rows-i;j++)
         {
-          printf(" ");
+        printf(" ");
         }
-      for(k=1;k<=i;k++) // getting the required number of *
-        {
-          printf("*");
-        }
-    printf("\n");
- }
+    
+      for(k=1;k<=(2*i-1);k++)
+       {
+         printf("*");
+       }
+       printf("\n");
+    } 
+   
 }
